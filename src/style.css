@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+ 
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+#app {
+  margin: 0 0;
+  padding: 0;
+}
+
+/* Custom Background */
+.bg-section {
+  background-color: #fbf6f0;
+} 
+.bg-green {
+  background-color: #567752 !important;
+}
+
+.bg-ungu-cerah {
+  background-color: #d167cc !important;
+}
+
+.text-pink {
+  color:   #d167cc !important;
+  ;
+}
+
+.text-green {
+  color: #567752 !important;
+}
+
