@@ -8,24 +8,24 @@ import footerils from '@/assets/footeril.png'
 
     <footer>
 
-        <section class="d-flex align-items-center justify-content-center">
+        <section class="section-footer d-flex align-items-center justify-content-center">
   
          
   
-          <form class="flex-grow-1">
+          <form class="flex-grow-1" method="get" action="mailto:erlanggahidayat.md@gmail.com">
   
-            <h2 class="display-5 text-white" style="display:inline-block;padding:.7rem 3.5rem .7rem 0rem" >Kontak Kami</h2>
+            <h2 class="display-5 text-white" style="display:inline-block;padding:.7rem 3.5rem .7rem 0rem;filter: drop-shadow(0 1px 2px rgb(0 0 0 / 0.1)) drop-shadow(0 1px 1px rgb(0 0 0 / 0.06));  " >Kontak Kami</h2>
             
-            <div class='d-flex gap-3'>
+            <div class='area-form d-flex gap-3'>
               <div class="d-flex flex-column justify-content-between p-0">
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                <input type="text" name="name" class="form-control" id="exampleFormControlInput1" placeholder="lesa melia">
+                <input type="email" name="mail" class="form-control" id="exampleFormControlInput1" placeholder="lesa_melia@email.com">
               </div>
               <div class="flex-grow-1">
-                <textarea class="form-control" id="exampleFormControlTextarea1" style="height: 100%;"></textarea>
+                <textarea type="text" name="comment" class="form-control" id="exampleFormControlTextarea1" style="height: 100%;"></textarea>
               </div>
             </div>
-            <button class="btn my-4 px-4 py-2" style="color:#567752;background-color: #fbf6f0;">Kirim Pesan</button>
+            <button type="submit" class="btn my-4 px-4 py-2" style="color:#567752;background-color: #fbf6f0;">Kirim Pesan</button>
           </form>
           <div class="" style="text-align: right;">
             <img :src="footerils" alt="footerils" style="width: 600px;margin:-4rem 0 0 0"/>
@@ -76,10 +76,10 @@ footer {
   footer textarea {
     background-color: #729c6c;
     border: none;
-    color: #fbf6f0;
+    color: #ddd;
   }
   footer input::placeholder{
-    color: #fbf6f0;
+    color: #ddd;
   }
   footer input:focus,footer textarea:focus {
     background-color: #85b47f;
@@ -109,5 +109,34 @@ footer {
   
   footer input:nth-child(1) {
     margin: 0px 0 6px 0
+  }
+
+
+  @media screen and (max-width:1021px) {
+
+  
+    .section-footer{
+      flex-direction: column-reverse;
+    }
+    footer form {
+      flex-direction: column;
+      width: 100% !important;
+    }
+    .area-form textarea {
+      height: 120px !important;
+      
+    }
+    .area_copyright {
+      flex-direction: column-reverse ;
+    }
+  }
+
+  @media screen and (max-width:1287px) {
+    .area-form {
+      flex-direction: column;
+    }
+    .area-form textarea,.area-form input {
+      width: 100%;
+    }
   }
 </style>

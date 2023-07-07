@@ -2,29 +2,41 @@
 import navigasi from '@/components/moleculs/navigasi.vue'
 import hero from '@/components/moleculs/hero.vue'
 import area_section from '@/components/template/main_section.vue'
-import Footer from './components/template/footer.vue';
-import { computed, onBeforeMount, ref } from 'vue';
-
+import Footer from '@/components/template/footer.vue';
+import {  onBeforeMount, onMounted, ref } from 'vue';
+import loading_fn from '@/utility/loading.js'
+import CallAPI from '@/API/config.js'
+import { useStore } from 'vuex';
 const loading = ref(null)
 
-document.addEventListener('scroll', (e) => {
- const scrollcalc = (document.body.scrollTop || document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight) * 100
- document.querySelector('#lineScroll')?.setAttribute("style",`width:${scrollcalc}%;transition:.1s all`)
-}) 
+const id_random1 = Math.random() * 8
+const id_random2 = Math.random() * 8
+const id_random3 = Math.random() * 8
 
 
-document.addEventListener('DOMContentLoaded',()=>{
-  loading.value = true
+const store = useStore()
+
+// Function loading 
+
+onBeforeMount(() => {
+    loading_fn(loading)
 })
 
-document.onreadystatechange = () => {
-  loading.value=false
-}
+onMounted(async() => {
+  const response = await CallAPI()
+  store.commit('add_datas',response)
+
+
+  console.log(store.getters.home_data(id_random1,id_random2,id_random3))
+})
+
+
 
 
 </script>
 
 <template>
+  {{ }}
   <div class="loading" style="height: 100vh;display:grid;place-items:center" v-if="loading == true">
     <div class="loader" >Loading...</div>
   </div>

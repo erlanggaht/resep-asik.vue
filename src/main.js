@@ -11,7 +11,16 @@ const store = createStore({
     }
   },
   mutations: {
-    
+    add_datas (state,data) {
+      state.datas.push(data)
+    }
+  },
+  getters : {
+    home_data (state,id1,id2,id3) {
+      return state.datas.filter((m,i) => {
+        
+      })  
+    }
   }
 })
 
