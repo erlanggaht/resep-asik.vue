@@ -2,11 +2,13 @@
 import cards from '@/components/organism/cards.vue'
 
 
+
 </script>
 <template>
 
+  
     <section class="area_section bg-section position-relative ">
-        <div class=" area_card  position-absolute shadow" style="top:-6.3rem">
+        <div class="area_card  position-absolute shadow" style="top:-6.3rem">
 
           <cards/>
         

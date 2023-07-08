@@ -18,7 +18,7 @@
          resep ini gratis untuk di pelajari, ayoo cari resep makananan disini sekarang juga.
         </p>
   
-        <button class="mt-2 btn btn-link text-decoration-none bg-ungu-cerah py-3 px-4 shadow-sm"><a href="#" class="text-white fs-6 text-decoration-none">Cari Resep</a></button>
+        <router-link :to="'/cari_resep'"><button class="mt-2 btn btn-link text-decoration-none bg-ungu-cerah py-3 px-4 shadow-sm"><a href="#" class="text-white fs-6 text-decoration-none">Cari Resep</a></button></router-link>
       </div>
 </template>
 

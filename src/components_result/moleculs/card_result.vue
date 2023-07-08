@@ -6,7 +6,8 @@ const props = defineProps({
   link: String,
   avatar: String,
   title: String,
-  instructions : String
+  instructions : String,
+  index : Number
 })
 
 const class_style = {
@@ -18,10 +19,12 @@ const class_style = {
 </script>
 
 <template>
-  <div class="d-flex align-items-center gap-4">
-    <div :class="class_style.avatar"></div>
+  <div class="card_content d-flex align-items-center gap-4">
     <div>
-      <p class=" fs-5 display-5 fw-normal my-3">{{props.title}}</p>
+    <p class="fs-5 display-5 fw-normal my-3 rounded-pill px-2 py-1" style="color:#375963;background-color:#eee">{{index +1}} </p>
+  </div>
+    <div  >
+      <p class=" fs-5 display-5 fw-normal my-3" style="text-transform: capitalize;"> {{props.title}}</p>
       <p :class="[class_style.p]" style="width: 360px;height:1.5rem">{{props.instructions}}</p>
     </div>
   </div>
@@ -43,10 +46,7 @@ const class_style = {
 
 }
 
-.avatar1,
-.avatar2,
-.avatar3,
-.avatar4 {
+.avatar {
   width: 42px;
   height: 42px;
   background-position: center .4rem;
@@ -54,30 +54,16 @@ const class_style = {
   background-repeat: no-repeat;
 }
 
-.avatar1 {
-  background-image: url('../../assets/fruits.svg');
-  background-color: #fca14e;
-}
-
-.avatar2 {
-  background-image: url('../../assets/fired.svg');
-  background-color: #93b339;
-
-}
-
-.avatar3 {
-  background-image: url('../../assets/cookie.svg');
+.avatar {
+  background-image: url('@/assets/cookie.svg');
   background-color: #f5984b;
-
 }
 
-.avatar4 {
-  background-image: url('../../assets/eggplant.svg');
-  background-color: #608b5d;
-
-}
 
 @media screen and (max-width:767px) { 
+  .card_content {
+    width: 530px;
+  }
   .descript-card {
     width: 100% !important;
     
