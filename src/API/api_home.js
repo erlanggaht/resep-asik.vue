@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const api_exampl ='http://localhost:5173/data.json'
-const api_deploy ='http://localhost:5173/data.json'
+const api_deploy ='https://resep-asik.vercel.app/data.json'
 
 
 
