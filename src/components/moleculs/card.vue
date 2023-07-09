@@ -87,19 +87,11 @@ const class_style = {
   .avatar3,
   .avatar4 { 
 
-    width: 250px;
+    display: none;
    }
   
 }
 
-@media screen and (max-width:564px) {
-  .avatar1,
-  .avatar2,
-  .avatar3,
-  .avatar4 {
-   display: none;
-  }
 
-}
 
 </style>
